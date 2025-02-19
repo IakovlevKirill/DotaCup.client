@@ -1,16 +1,37 @@
 import {Link} from "react-router-dom";
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 export const Main = () => {
+
+    const location = useLocation();
+    const pathname = location.pathname;
+
 
     const NavBar = () => {
         return(
             <div className="bg-[#191919] w-[100vw] min-h-[7%] flex items-center">
                 <div className="ml-[3%] h-[100%] w-[37%] flex items-center  flex-row justify-between">
-                    <Link className="text-[15px] text-white! font-[Montserrat-semibold]" to="tournaments">Турниры</Link>
-                    <Link className="text-[15px] text-white! font-[Montserrat-semibold]" to="teams">Команды</Link>
-                    <Link className="text-[15px] text-white! font-[Montserrat-semibold]" to="players">Игроки</Link>
-                    <Link className="text-[15px] text-white! font-[Montserrat-semibold]" to="vod-streams">VOD/Stream</Link>
+                    <Link
+                        className={`text-[15px] text-white! font-[Montserrat-semibold]`}
+                        to="tournaments">
+                        Турниры
+                        {(pathname.includes('tournaments')) && (
+                            <div className="absolute w-[72px] h-[2px] bg-[#FF171B]"></div>
+                        )}
+                    </Link>
+                    <Link className="text-[15px] text-white! font-[Montserrat-semibold]" to="teams">Команды
+                        {(pathname.includes('teams')) && (
+                            <div className="absolute w-[72px] h-[2px] bg-[#FF171B]"></div>
+                        )}
+                    </Link>
+                    <Link className="text-[15px] text-white! font-[Montserrat-semibold]" to="players">Игроки
+                        {(pathname.includes('players')) && (
+                            <div className="absolute w-[72px] h-[2px] bg-[#FF171B]"></div>
+                        )}</Link>
+                    <Link className="text-[15px] text-white! font-[Montserrat-semibold]" to="vod-streams">VOD/Stream
+                        {(pathname.includes('vod-stream')) && (
+                            <div className="absolute w-[72px] h-[2px] bg-[#FF171B]"></div>
+                        )}</Link>
                 </div>
                 <div className="w-[37%]"></div>
                 <div className="w-[20%] mr-[3%] flex items-center justify-center flex-row gap-[15px]">
