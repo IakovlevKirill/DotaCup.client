@@ -9,7 +9,7 @@ export const Main = () => {
 
     const NavBar = () => {
         return(
-            <div className="bg-[#191919] w-[100vw] min-h-[7%] flex items-center">
+            <div className="bg-[#191919] overflow-hidden max-w-[100vw] min-w-[100vw] min-h-[7%] flex items-center">
                 <div className="ml-[3%] h-[100%] w-[37%] flex items-center  flex-row justify-between">
                     <Link
                         className={`text-[15px] text-white! font-[Montserrat-semibold]`}
