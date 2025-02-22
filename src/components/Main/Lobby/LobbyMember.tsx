@@ -26,8 +26,6 @@ export const LobbyMember = ( props: LobbyMemberProps) => {
                 <span
                     className="text-[14px] text-[#FFFFFF] opacity-47 font-[Montserrat-semibold] mt-[0px]">{props.mmr}</span>
                 <div className="flex mt-[12px] gap-[10px] flex-row">
-
-
                     {(isCarry) && (
                         <img src="../../../../src/assets/images/carry_icon.png" alt="1"/>
 
