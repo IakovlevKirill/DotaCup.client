@@ -5,6 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "noUnusedLocals": false // Отключает проверку неиспользуемых переменных
-  },
+    "noUnusedLocals": false, // Отключает проверку неиспользуемых локальных переменных
+    "noUnusedParameters": false // Отключает проверку неиспользуемых параметров
+  }
 }

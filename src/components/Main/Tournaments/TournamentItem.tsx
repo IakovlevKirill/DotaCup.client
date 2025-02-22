@@ -1,3 +1,4 @@
+import {NavLink} from "react-router-dom";
 
 interface TournamentItemProps{
     date: string;
@@ -8,6 +9,7 @@ interface TournamentItemProps{
 }
 
 export const TournamentItem = ( props : TournamentItemProps ) => {
+
     return (
         <div className="flex flex-col mb-[100px]">
             <div className="flex flex-row items-center gap-[19px] mt-[24px]">
@@ -49,10 +51,11 @@ export const TournamentItem = ( props : TournamentItemProps ) => {
                             </button>
                         )}
                         {(props.date === 'Today') && (
-                            <button
-                                className="bg-[#CE3636] min-w-[205px] hover:opacity-85 focus:border-none! font-[Montserrat-medium] focus:outline:none! shadow-none cursor-pointer rounded-[10px] text-white text-center px-[40px] mb-[19px] py-[13px]">
+                            <NavLink
+                                className="flex bg-[#CE3636] min-w-[205px] hover:opacity-85 focus:border-none! font-[Montserrat-medium] focus:outline:none! shadow-none cursor-pointer rounded-[10px] text-white text-center px-[40px] mb-[19px] py-[13px]"
+                                to={`${1}/lobby/${2}`}>
                                 Перейти в лобби
-                            </button>
+                            </NavLink>
                         )}
                     </div>
                 </div>

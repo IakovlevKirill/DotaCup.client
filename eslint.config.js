@@ -25,7 +25,7 @@ export default tseslint.config(
                 'warn',
                 { allowConstantExport: true },
             ],
-            'no-unused-vars': 'off', // Отключаем стандартное правило
+            "@typescript-eslint/no-unused-vars": "off", // Отключаем правило
             'unused-imports/no-unused-imports': 'warn', // Включаем плагин
         },
     },

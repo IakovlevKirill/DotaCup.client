@@ -4,7 +4,6 @@ import { useRef } from 'react';
 
 export const TournamentPage = () => {
 
-    const tournamentData = undefined
 
     const containerRef = useRef(null);
 

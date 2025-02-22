@@ -1,4 +1,7 @@
 
+export type ExampleTypeForApi = {
+    id: number;
+}
 
 export type TeamMemberType = {
     name: string
