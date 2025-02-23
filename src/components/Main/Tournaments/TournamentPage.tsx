@@ -7,12 +7,9 @@ export const TournamentPage = () => {
 
     const containerRef = useRef(null);
 
-    // Обработчик события wheel
-    const handleWheel = (e : any) => {
+    const handleWheel = (e : any ) => {
         if (containerRef.current) {
-            // Отменяем стандартное поведение (вертикальную прокрутку)
             e.preventDefault();
-            // Прокручиваем контейнер по горизонтали
             containerRef.current.scrollLeft += e.deltaY;
         }
     };
