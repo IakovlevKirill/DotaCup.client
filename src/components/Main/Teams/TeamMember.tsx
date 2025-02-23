@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 
 interface TeamMemberProps {
     name: string
@@ -15,7 +16,9 @@ export const TeamMember = ( props: TeamMemberProps) => {
     const isHardSupport : boolean = props.positions.includes("5")
 
     return (
-        <div className="cursor-pointer  flex flex-col pt-[10px] pb-[14px] rounded-[18px] px-[10px] items-center justify-center
+        <Link
+            to={`/main/profile/${props.name}`}
+            className="cursor-pointer  flex flex-col pt-[10px] pb-[14px] rounded-[18px] px-[10px] items-center justify-center
             hover:bg-[#6b1a1b]
         ">
             <img src="../src/assets/images/pudge_90.png" className="cursor-pointer w-[90px] h-[90px] "></img>
@@ -39,6 +42,6 @@ export const TeamMember = ( props: TeamMemberProps) => {
                     <img src="../../../../src/assets/images/hard_support_icon.png" alt="5"/>
                 )}
             </div>
-        </div>
+        </Link>
     );
 };

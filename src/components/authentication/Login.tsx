@@ -17,7 +17,7 @@ export const Login = () => {
                 requiredMark={false}
                 layout="vertical"
                 onFinish={ () => {
-                    navigate('/main')
+                    navigate('/main/tournaments')
                 }}
             >
                 <div
@@ -118,7 +118,7 @@ export const Login = () => {
                 requiredMark={false}
                 layout="vertical"
                 onFinish={ () => {
-                    navigate('/main')
+                    navigate('/main/tournaments')
                 }}
             >
                 <div

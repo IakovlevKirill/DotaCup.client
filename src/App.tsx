@@ -7,6 +7,7 @@ import {PlayersPage} from "./components/Main/Players/PlayersPage.tsx";
 import {StreamsAndVodPage} from "./components/Main/StreamsAndVOD/StreamsAndVOD.tsx";
 import {NotFoundPage} from "./components/NotFoundPage.tsx";
 import {Lobby} from "./components/Main/Lobby/Lobby.tsx";
+import {ProfilePage} from "./components/Profile/ProfilePage.tsx";
 
 export const App = () => {
     return (
@@ -14,7 +15,7 @@ export const App = () => {
             <BrowserRouter>
                 <Routes>
                     {/* Главная страница логина */}
-                    <Route path="/" element={<Login />} />
+                    <Route index path="/" element={<Login />} />
 
                     {/* Главная страница (Main) с вложенными маршрутами */}
                     <Route path="/main" element={<Main />}>
@@ -24,6 +25,7 @@ export const App = () => {
                         <Route path="teams" element={<TeamsPage />} />
                         <Route path="players" element={<PlayersPage />} />
                         <Route path="vod-streams" element={<StreamsAndVodPage />} />
+                        <Route path='profile/:nickname' element={<ProfilePage />} />
                     </Route>
 
                     {/* Страница 404 */}

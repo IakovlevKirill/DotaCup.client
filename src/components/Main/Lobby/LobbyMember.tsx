@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 interface LobbyMemberProps {
     name: string
@@ -19,8 +20,9 @@ export const LobbyMember = ( props: LobbyMemberProps) => {
     return (
         <div className="flex flex-row pt-[5px] pb-[5px] rounded-[18px] items-end justify-between">
             <div className="w-[60%] flex items-end">
-                <span
-                    className="flex text-[16px] text-[#FFFFFF] font-[Montserrat-semibold] mt-[12px] cursor-pointer  hover:underline">{props.name}</span>
+                <Link to={`/main/profile/${props.name}`}
+                    className="flex text-[16px] text-[#FFFFFF] font-[Montserrat-semibold] mt-[12px] cursor-pointer  hover:underline">{props.name}
+                </Link>
             </div>
             <div className="flex flex-row items-end justify-between w-[40%]">
                 <span
