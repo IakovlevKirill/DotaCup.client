@@ -86,26 +86,37 @@ export const Login = () => {
 
     const ReversedString = () => {
 
-        const textLines = [
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-            "DOTA 2 TOP4 CUP",
-        ];
-
         return (
-            <div className="w-[50px] bg-[#0C0C0C] h-[100vh] relative overflow-hidden">
-                <div className="h-[100vh] animate-scroll">
-                    {textLines.map((line, index) => (
-                        <div key={index} className="select-none flex mt-[250px] text-white font-[Montserrat-bold]! text-[24px] whitespace-nowrap transform rotate-270">
-                            {line}
+            <div className="container-wrap font-[Montserrat-bold]!">
+                <div className="container">
+                    <div className="animated">
+                        <div
+                            className="text">DOTA
+                            2 TOP4 CUP
                         </div>
-                    ))}
+                        <div
+                            className="text">DOTA
+                            2 TOP4 CUP
+                        </div>
+                        <div
+                            className="text">DOTA
+                            2 TOP4 CUP
+                        </div>
+                    </div>
+                    <div className="animated">
+                        <div
+                            className="text">DOTA
+                            2 TOP4 CUP
+                        </div>
+                        <div
+                            className="text">DOTA
+                            2 TOP4 CUP
+                        </div>
+                        <div
+                            className="text">DOTA
+                            2 TOP4 CUP
+                        </div>
+                    </div>
                 </div>
             </div>
         )
@@ -117,7 +128,7 @@ export const Login = () => {
                 hidden={isLogInFormHidden}
                 requiredMark={false}
                 layout="vertical"
-                onFinish={ () => {
+                onFinish={() => {
                     navigate('/main/tournaments')
                 }}
             >

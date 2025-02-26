@@ -70,3 +70,45 @@
   background: rgb(64, 64, 64); /* Цвет ползунка */
   border-radius: 100px; /* Закругление ползунка */
 }
+
+.container {
+  z-index: 3;
+  width: 50px;
+  height: 100vh;
+  background: #0C0C0C;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.animated {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: animate 20s linear infinite;
+}
+
+.text {
+  user-select: none;
+  white-space: nowrap;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Высота текстового блока равна высоте контейнера */
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg)
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
