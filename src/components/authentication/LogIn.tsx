@@ -14,7 +14,7 @@ export const LogIn = () => {
             }}
         >
             <div
-                className="w-[520px] h-[100vh] backdrop-blur-[80px] bg-[#000000 2%] flex flex-col px-[32px] py-[26px] align-center justify-center">
+                className="w-[520px] h-[100vh] backdrop-blur-[30px] bg-[#000000 2%] flex flex-col px-[32px] py-[26px] align-center justify-center">
                 <Form.Item
                     name={'name'}
                 >
